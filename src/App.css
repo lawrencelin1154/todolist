@@ -1,0 +1,41 @@
+.container {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 5px;
+  height: 100%;
+}
+
+.largeContainer {
+  margin: 2px;
+  padding: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.smallContainer {
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.categoryContainer:hover .MuiButton-root {
+  opacity: 1;
+  justify-content: center;
+}
+
+.buttonContainer {
+  justify-content: center;
+  margin: 5px;
+  padding: 0px 10px 0px 10px;
+  height: 100%;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  margin: 0px;
+}
