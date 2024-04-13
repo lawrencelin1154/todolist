@@ -7,7 +7,7 @@ function TodoItem({ todo, onToggle }) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   return (
-    <ListItem>
+    <ListItem sx={{px:0}}>
       <Checkbox {...label} checked={todo.completed}
         onChange={() => onToggle(todo.id)} />
       <ListItemText primary={todo.task} />
