@@ -45,7 +45,7 @@ function Footer({ addTask, category, setCategory, inputValue, setInputValue}) {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <FormControl fullWidth>
-        <InputLabel>Category</InputLabel>
+        <InputLabel>Categorys</InputLabel>
         <Select
           value={category}
           label="Category"
