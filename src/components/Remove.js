@@ -7,11 +7,11 @@ import PopUp from "./PopUp";
 
 function Remove({category, setCategory, removeCheckedTodos}) {
 
+  const [open, setOpen] = useState(false);
+
   const handleAddClick = () => {
     setCategory(category);
   };
-
-  const [open, setOpen] = useState(false);
 
   return (
     <>

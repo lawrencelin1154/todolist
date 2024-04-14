@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import "../App.css";
 
-function Footer({ addTask, category, setCategory, inputValue, setInputValue }) {
+function Footer({ addTask, category, setCategory, inputValue, setInputValue}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();

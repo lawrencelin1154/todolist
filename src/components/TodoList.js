@@ -32,17 +32,18 @@ function TodoList() {
   return (
     <div className="largeContainer">
       {["Personal", "Work", "Academic"].map((category) => (
-        <Box 
-        height={600}
-        width={300}
-        mx={10}
-        display="flex"
-        alignItems="left"
-        p={3}
-        sx={{ border: '2px solid grey', borderRadius: 5}}>
+        <Box
+          height={600}
+          width={300}
+          mx={10}
+          display="flex"
+          alignItems="left"
+          p={3}
+          sx={{ border: "2px solid grey", borderRadius: 5 }}
+        >
           <div className="categoryContainer">
-          <h2>{category}</h2>
-            <Box key={category} sx={{pt:1, pb: 1, px: 0}}>
+            <h2>{category}</h2>
+            <Box key={category} sx={{ pt: 1, pb: 1, px: 0 }}>
               <div className="buttonContainer">
                 <Remove
                   category={category}
@@ -51,15 +52,15 @@ function TodoList() {
                 />
               </div>
             </Box>
-              {todos
-                .filter((todo) => todo.category === category)
-                .map((todo) => (
-                  <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} />
-                ))}
+            {todos
+              .filter((todo) => todo.category === category)
+              .map((todo) => (
+                <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} />
+              ))}
           </div>
         </Box>
       ))}
-      <Footer 
+      <Footer
         addTask={addTask}
         category={category}
         setCategory={setCategory}
