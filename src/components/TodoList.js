@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Box } from "@mui/material";
 import TodoItem from "./TodoItem";
 import Footer from "./Footer";
@@ -29,6 +29,13 @@ function TodoList() {
     setTodos([...todos, newTask]);
   };
 
+  const inputRef = useRef(null);
+
+  const handleAddClick = () => {
+    inputRef.current.focus();
+    console.log("hi");
+  };
+
   return (
     <div className="largeContainer">
       {["Personal", "Work", "Academic"].map((category) => (
@@ -49,6 +56,7 @@ function TodoList() {
                   category={category}
                   setCategory={setCategory}
                   removeCheckedTodos={removeCheckedTodos}
+                  handleClick={() => handleAddClick()}
                 />
               </div>
             </Box>
@@ -66,6 +74,7 @@ function TodoList() {
         setCategory={setCategory}
         inputValue={inputValue}
         setInputValue={setInputValue}
+        inputRef={inputRef}
       />
     </div>
   );

@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import "../App.css";
 
-function Footer({ addTask, category, setCategory, inputValue, setInputValue}) {
+function Footer({ addTask, category, setCategory, inputValue, setInputValue, inputRef}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +43,7 @@ function Footer({ addTask, category, setCategory, inputValue, setInputValue}) {
         variant="outlined"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        inputRef = {inputRef}
       />
       <FormControl fullWidth>
         <InputLabel>Categorys</InputLabel>

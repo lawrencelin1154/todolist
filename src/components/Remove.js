@@ -5,12 +5,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import PopUp from "./PopUp";
 
-function Remove({category, setCategory, removeCheckedTodos}) {
+function Remove({category, setCategory, removeCheckedTodos, handleClick}) {
 
   const [open, setOpen] = useState(false);
 
-  const handleAddClick = () => {
+  const handleCategory = () => {
     setCategory(category);
+    handleClick();
   };
 
   return (
@@ -26,7 +27,7 @@ function Remove({category, setCategory, removeCheckedTodos}) {
       <Button onClick={() => setOpen(true)}>
         <DeleteIcon />
       </Button>
-      <Button onClick={handleAddClick}>
+      <Button onClick={handleCategory}>
         <PostAddIcon />
       </Button>
     </ButtonGroup>
