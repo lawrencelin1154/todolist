@@ -35,6 +35,7 @@ function Footer({ addTask, category, setCategory, inputValue, setInputValue, inp
         bgcolor: "background.paper",
         display: "flex",
         gap: 2,
+        mx: 30,
       }}
     >
       <TextField
@@ -44,8 +45,11 @@ function Footer({ addTask, category, setCategory, inputValue, setInputValue, inp
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         inputRef = {inputRef}
+        sx={{ width: '100ch'}}
       />
-      <FormControl fullWidth>
+      <FormControl fullWidth
+      sx={{ width: '50ch'}}
+      >
         <InputLabel>Categorys</InputLabel>
         <Select
           value={category}
@@ -55,6 +59,7 @@ function Footer({ addTask, category, setCategory, inputValue, setInputValue, inp
           <MenuItem value="Personal">Personal</MenuItem>
           <MenuItem value="Work">Work</MenuItem>
           <MenuItem value="Academic">Academic</MenuItem>
+          <MenuItem value="College">College</MenuItem>
         </Select>
       </FormControl>
       <Button variant="contained" onClick={handleSubmit}>

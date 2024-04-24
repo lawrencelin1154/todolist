@@ -33,20 +33,18 @@ function TodoList() {
 
   const handleAddClick = () => {
     inputRef.current.focus();
-    console.log("hi");
   };
 
   return (
     <div className="largeContainer">
-      {["Personal", "Work", "Academic"].map((category) => (
+      {["Personal", "Work", "Academic", "College"].map((category) => (
         <Box
           height={600}
-          width={300}
-          mx={10}
+          width="30%"
           display="flex"
           alignItems="left"
           p={3}
-          sx={{ border: "2px solid grey", borderRadius: 5 }}
+          sx={{ border: "2px solid grey", borderRadius: 5, mx:2 }}
         >
           <div className="categoryContainer">
             <h2>{category}</h2>
